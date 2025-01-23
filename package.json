@@ -1,0 +1,18 @@
+{
+  "name": "tenda-atacado",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "cypress": "cypress run",
+    "cypress:open": "cypress open",
+    "cy:run": "cypress run --headless --browser chrome --config video=false --env allure=true ",
+    "test": "npm run all allure:clear cy:run allure:report"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "cypress": "^14.0.0"
+  }}
