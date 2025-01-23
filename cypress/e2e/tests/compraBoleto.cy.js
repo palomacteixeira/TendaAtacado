@@ -14,7 +14,7 @@ describe('Automação Tenda Atacado', () => {
         // Procurar e adicionar produtos no carrinho
         cy.get('#searchbarComponent').click()
         cy.get('#shipping-cep').type(12504100)
-        cy.get(':nth-child(2) > .card-content > .card-information-component > .content').click()
+        cy.get(':nth-child(2) > .card-content > .card-information-component > .content', {timeout: 20000}).click()
         cy.wait(3000)
         cy.get('#searchbarComponent').type('feijão')  
         cy.get('.input-group > div > .btn').click()
@@ -45,14 +45,14 @@ describe('Automação Tenda Atacado', () => {
 
         // Criando cadastro
         cy.get('p > span').click()
-        cy.get('#nome').type('Teste Tenda Atacado Trinta e Seis')
-        cy.get('#cpf').type(29979944030)
-        cy.get('#email').type('timotei3023@uorak.com')    
-        cy.get('#cellphone').type(11961166989)    
+        cy.get('#nome').type('Teste Tenda Atacado Trinta e Nove')
+        cy.get('#cpf').type(57208270058)
+        cy.get('#email').type('deann2668@uorak.com')    
+        cy.get('#cellphone').type(11999543691)    
         cy.get('#password').type('testeTenda2038@')
         cy.get('#password2').type('testeTenda2038@')
         cy.get('.btn-create-account > [data-cy="btn-"]').click()
-        cy.get('#code').type('QTTDMH')
+        cy.get('#code').type('2PBKJG')
         cy.get('form > [data-cy="btn-"]', {timeout:10000}).click()
         cy.get(':nth-child(1) > #gender').click()
         cy.get('[data-cy="inpt-text-day"]').type(9)
@@ -82,7 +82,7 @@ describe('Automação Tenda Atacado', () => {
         cy.get('.direction-right > .fas').click().click().click().click().click()
         cy.get('.action > .fas').click()
         cy.get('.btn-buy').click()
-        cy.wait(30000)
+        cy.wait(40000)
         cy.get('#btFechar').click()
 
     });
